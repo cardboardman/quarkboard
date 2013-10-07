@@ -1,0 +1,53 @@
+body{
+	font-family: "Courier";
+	font-size: 0.875em;
+	margin: 20px auto 20px auto;
+	width:500px;
+	background-color: #EFEFEF;
+}
+main{
+	margin: 20px auto 10px auto;
+}
+header{
+	text-align:center;
+}
+footer{
+	font-size: 0.75em;
+	color: #CDCDCD;
+	text-align:center;
+}
+Peil{
+	font-size: 2em;
+}
+
+a{
+	color: inherit;
+	text-decoration:none;
+}
+a:hover{
+	border-bottom:1px solid;
+	color:red;
+}
+a:active{
+	border-bottom:2px solid;
+}
+a:hover.headText{
+	border-bottom:3px double;
+	color:red;
+}
+a:active.headText{
+	border-bottom:2px solid;
+}
+
+func{
+	color: #0000FF;
+}
+string{
+	color: #00AA00;
+}
+keyword{
+	color: #FF7700;
+}
+comment{
+	color: #DD0000;
+}
