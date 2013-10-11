@@ -1,5 +1,6 @@
 import web, os
 import settings as s
+import joeFunctions as jF
     
 urls = (
     '/', 'Index',
@@ -7,18 +8,13 @@ urls = (
     '/joe', 'Joe',
 )
 
-def Make(func, name, funcParse = [""]):
-    if len(funcParse) and funcParse != [""]:
-        return str(s.render.header(name))+str(func(funcParse))+str(s.render.footer())
-    return str(s.render.header(name))+str(func())+str(s.render.footer())
-
 class Index:
     def GET(self):
-        return Make(s.render.index, "Quarkboard")
+        return s.render.index("Quarkboard")
 
 class Joe:
     def GET(self):
-        return Make(s.render.joe, "Peilonrayz")
+        return jF.GetWebpage(web, s.render.Joe)
 
 class Sam:
     def GET(self):

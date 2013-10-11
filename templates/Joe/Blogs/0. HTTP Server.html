@@ -1,0 +1,48 @@
+In this blog post I will share a little snippet on how my website works.
+First of all, I use Python and <a href="http://webpy.org/">web.py</a>.
+This is as I don't really want to make a C/C++ website, as that would be a pain, I don't really want to use VB.Net which is what I'm being 'taught' at school and PHP or other web languages normally look horrible, and I can't be asked to learn another language at the moment.
+First off, I will explain how my site is layed out.
+/Server.py
+/static/style.css
+/templates/blog.html
+/templates/footer.html
+/templates/header.html
+/templates/blogs/0. HTTP Server.html
+So, what this means is that the the HTTP server (Server.py), loads the pages that people request. The main three pages that are requested are the header, footer and style, as they are requested on every single page. The contents of each page is added to by different html pages, such as blog.html for you to get on this page, or '0. HTTP Server.html' for the contents of this page. This is as they are all parts of a html page, such as the header has the main links and my ailies. So that I don't have to add it to every page, and due to this being a web.py server it means that I can have automation in my HTML! (Oh how nice that is without PHP!)
+If we have a look at Server.py, you will notice it's contents is very little.
+<Python>import web, os
+
+render = web.template.render('templates/')
+blogs = web.template.render('templates/blogs/')
+blogsList = os.listdir('templates/blogs/')
+
+for i in xrange(len(blogsList)):
+    blogsList[i] = blogsList[i][:-5]
+    
+urls = (
+    '/blog', 'Blog',
+)
+
+def Make(func, name, funcParse = [""]):
+    if len(funcParse) and funcParse != [""]:
+        return str(render.header(name)
+                   )+str(func(funcParse)
+                   )+str(render.footer())
+    return str(render.header(name)
+               )+str(func()
+               )+str(render.footer())
+    
+class Blog:
+    def GET(self):
+        i = web.input(b="")
+        if i['b'] != "":
+            b = blogs._lookup(i['b'])[1]
+            if b != None:
+                return Make(blogs._template(i['b']),
+                            blogsList[int(i['b'])])
+        return Make(render.blog, "Blog", blogsList)
+
+if __name__ == "__main__":
+    app = web.application(urls, globals())
+    app.run()</Python> 
+This is only for the blog section of the server, but it shows how there needs to be very little code.
