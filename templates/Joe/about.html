@@ -1,16 +1,142 @@
+<script type="application/javascript">//text/javascript(obsolete)
+function Show(id){
+    document.getElementById(id).style.display = "block";
+    document.getElementById(id+"Show").style.display = "None";
+    document.getElementById(id+"Hide").style.display = "block";
+}
+function Hide(id){
+    document.getElementById(id).style.display = "None";
+    document.getElementById(id+"Show").style.display = "block";
+    document.getElementById(id+"Hide").style.display = "None";
+}
+</script>
+$def MakeButtons(name, id):
+    <a href="" class="moreButton Show" id="$(id)Show" onclick="Show('$id'); return false;">
+        $(name).
+    </a>
+    <a href="" class="moreButton Hide" id="$(id)Hide" onclick="Hide('$id'); return false;">
+        $(name).
+    </a>
+    <div class="moreDiv" id="$id">
+    <script type="application/javascript">
+        Hide('$id');
+    </script>
+$code
+    def Space(num):
+        string = ""
+        for i in range(num):
+            string += "&nbsp;"
+        return string
+
 Hello, I am Joe Wallis.</br>
-</br>
-I started programming when I was 13, this was mostly basic precepts such as data types and concatenation.
-I then became board of it, and carried on with my boring life, but then came back, when I was 15.
-This time I was better, and wanted to make a program that would do something, not just read a book.
-This lead to me making a few menial small applications, that are terrible. But enjoying every moment of it.
-This then lead to me becoming better, and making my first big program. This was my original YouTube Channel and playlist URL downloader.
-Which at the time I thought was amazing! And would constantly use it to update my beats.
-Then I became more self intuitive, and started thinking;</br>
-'What do I want to make?'</br>
-This kept being small applications to help me stretch my knowledge, learning about wave files, TCP sockets, JSON and much more.
-But I had to use both the amazing <a href="http://docs.python.org/2/">Python docs</a> and friendly <a href="http://stackoverflow.com/">Stack Overflow</a>.</br>
-</br>
-Now at the age of 16, I have made a 'proper' API, for extracting data from a VPK file, and have updated my YouTube downloader to be much smaller, and faster.</br>
-</br>
-Also, I like a magnitude of music, but highly recommend, <a href="https://www.facebook.com/edmSpotlight">edmSpotlight</a>, <a href="https://www.facebook.com/edmStudiotv">edmStudio</a> and <a href="https://www.facebook.com/edmDistrict">edmDistrict</a>. A growing EDM group, that promote each other, and have allot of fast and happy music.
+$:MakeButtons("Early Years", "earlyYears")
+I first started programming when I was 13. I was a complete nub, wanting to make a full on visual game. This game was going to be a RPG. Asking for help from a friend, and being a general pest, I learnt the basics of python. This was things like print, time, and functions. This soon became pretty boring, and as my friend was incredibly good at programming, I soon thought that it was too hard, and wouldn't learn it. This lead to me being less into programming for about a year.
+</div>
+$:MakeButtons("After the Break", "afterTheBreak")
+I then for some reason that I don't remember, started to want to program again, wanting to finally understand what a class was and how to use one, and what the hell that 'self' meant on every single class' function, and I did! all I needed to do was watch <a href="http://www.youtube.com/watch?v=M1BAlDufqao" target="_blank">a video</a> on it. This helped me to understand why classes are so powerful. As I'm sure most people who read this will know. But don't get me wrong, functional stuff is still incredibly helpful! This then lead to my first large python project. My YouTube playlist downloader, that I'm still updating, but this was my first proper use of classes, then changed to being more python Lib/API. Later I started to use both <a href="http://docs.python.org/2/" target="_blank">Python docs</a> and <a href="http://stackoverflow.com/" target="_blank">Stack Overflow</a>, both amazing websites with a ton of information, I learnt how to use JSON, Time, Struct, and more python API/Libs with these websites.
+</div>
+$:MakeButtons("Music", "music")
+I like allot of music, but my favourite community is <a href="https://www.facebook.com/edmSpotlight" target="_blank">edmSpotlight</a>, <a href="https://www.facebook.com/edmStudiotv" target="_blank">edmStudio</a> and <a href="https://www.facebook.com/edmDistrict" target="_blank">edmDistrict</a>, they take allot of smaller and some larger producers and promoters, and make it so that they are one large EDM community.
+But within and out of this community, I liked these promoters, and producers.
+$:MakeButtons("MrSuicideSheep", "mrSuicideSheep")
+MrSuicideSheep:$:Space(2)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a></br>
+Electus:$:Space(9)<a href="http://www.youtube.com/user/ElectusOfficial" target="_blank">YouTube</a> <a href="https://soundcloud.com/electusofficial" target="_blank">SoundCloud</a></br>
+Adventure Club:$:Space(2)<a href="http://www.youtube.com/user/adventureclubdubstep" target="_blank">YouTube</a> <a href="https://soundcloud.com/adventureclubdubstep" target="_blank">SoundCloud</a></br>
+Kill paris:$:Space(6)<a href="http://www.youtube.com/user/Killparispaige" target="_blank">YouTube</a> <a href="https://soundcloud.com/killparis" target="_blank">SoundCloud</a></br>
+Two Thirds:$:Space(6)<a href="http://www.youtube.com/user/dranner123" target="_blank">YouTube</a> <a href="https://soundcloud.com/lewismd" target="_blank">SoundCloud</a></br>
+Uppermost:$:Space(7)<a href="http://www.youtube.com/user/uppermostmusic" target="_blank">YouTube</a> <a href="https://soundcloud.com/uppermost" target="_blank">SoundCloud</a></br>
+Rameses B:$:Space(7)<a href="http://www.youtube.com/user/RamesesB" target="_blank">YouTube</a> <a href="https://soundcloud.com/ramesesb" target="_blank">SoundCloud</a></br>
+PrototypeRaptor:$:Space(1)<a href="http://www.youtube.com/user/MrPrototypeRaptor" target="_blank">YouTube</a> <a href="https://soundcloud.com/prototyperaptor" target="_blank">SoundCloud</a></br>
+Coyote Kisses:$:Space(3)<a href="http://www.youtube.com/user/TheCoyoteKisses" target="_blank">YouTube</a> <a href="https://soundcloud.com/coyotekisses" target="_blank">SoundCloud</a></br>
+Feint:$:Space(11)<a href="http://www.youtube.com/user/FeintDnB" target="_blank">YouTube</a> <a href="https://soundcloud.com/feintdnb" target="_blank">SoundCloud</a></br>
+KOAN sound:$:Space(6)<a href="http://www.youtube.com/user/KoanSoundTV" target="_blank">YouTube</a> <a href="https://soundcloud.com/koan-sound" target="_blank">SoundCloud</a></br>
+Seven lions:$:Space(5)<a href="http://www.youtube.com/user/SEVENLIONSofficial" target="_blank">YouTube</a> <a href="https://soundcloud.com/seven-lions" target="_blank">SoundCloud</a></br>
+Gemini:$:Space(10)<a href="http://www.youtube.com/user/thisisgemini" target="_blank">YouTube</a> <a href="https://soundcloud.com/thisisgemini" target="_blank">SoundCloud</a></br>
+</div>
+$:MakeButtons("Monstercat", "monstercat")
+Monstercat:$:Space(6)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Insan3Lik3:$:Space(6)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Lets Be Friends:$:Space(1)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Tut Tut Child:$:Space(3)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Pegboard Nerds:$:Space(2)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Muzzy:$:Space(11)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Stephen Walking:$:Space(1)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Razihel:$:Space(9)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Rogue:$:Space(11)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Ephixa:$:Space(10)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Varien:$:Space(10)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Tristam:$:Space(9)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Obsidia:$:Space(9)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+DotEXE:$:Space(10)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Neilio:$:Space(10)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Arion:$:Space(11)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Project 46:$:Space(6)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Going Quantum:$:Space(3)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Matduke:$:Space(9)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+</div>
+$:MakeButtons("HDmusicNexus", "hDmusicNexus")
+HDmusicNexus:$:Space(5)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Vexare:$:Space(11)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+High Maintenance:$:Space(1)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+MitiS:$:Space(12)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+SirensCeol:$:Space(7)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+KDrew:$:Space(12)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Urbanstep:$:Space(8)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+S3RL:$:Space(13)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Couzare:$:Space(10)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+KATFYR:$:Space(11)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Bustrexx:$:Space(9)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+</div>
+$:MakeButtons("EpicNetworkMusic", "epicNetworkMusic")
+EpicNetworkMusic:$:Space(8)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Virtual Riot:$:Space(12)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Fusk Asker:$:Space(14)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Fox stevenson(Stan SB):$:Space(2)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Savant:$:Space(18)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Calvertron:$:Space(14)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Rabbit Killer:$:Space(11)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Diamond Eyes:$:Space(12)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Secret Panda Society:$:Space(4)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Mr. Nagasaki:$:Space(12)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Xilent:$:Space(18)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Black Tiger Sex Machine:$:Space(1)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Aelian:$:Space(18)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Klaypex:$:Space(17)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+KDrew:$:Space(19)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+System:$:Space(18)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Rex Riot:$:Space(16)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Vodge Diper:$:Space(13)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+PIXL:$:Space(20)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Candy Land:$:Space(14)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+</div>
+$:MakeButtons("Liquicity", "liquicity")
+Liquicity:$:Space(12)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Kaleb:$:Space(16)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Camo & Krooked:$:Space(7)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Druid:$:Space(16)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Shift Enigma:$:Space(9)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Memro:$:Space(16)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Willem de Roo:$:Space(8)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Modu:$:Space(17)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Wreckage Machinery:$:Space(3)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Maduk:$:Space(16)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Mistabishi:$:Space(11)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Colossus:$:Space(13)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Breaknoise:$:Space(11)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Hybrid Minds:$:Space(9)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Woody:$:Space(16)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Matrix & Futurebound:$:Space(1)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+539 Limited Bootleg:$:Space(2)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Moleman:$:Space(14)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+High Contrast:$:Space(8)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Logistics:$:Space(12)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Deep Focus:$:Space(11)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Bachelors Of Science:$:Space(1)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+</div>
+$:MakeButtons("Others", "others")
+ProleteR:$:Space(6)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+Bastion (OST):$:Space(1)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+NerondaKuro:$:Space(3)<a href="http://www.youtube.com/user/" target="_blank">YouTube</a> <a href="https://soundcloud.com/" target="_blank">SoundCloud</a></br>
+</div>
+
+</div>
